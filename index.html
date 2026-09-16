@@ -16,7 +16,7 @@ window.PPEC_SITE = {
   // Your email address. The "Request a demo" and "Contact us"
   // buttons will open a new email to this address.
   // (Left blank for now — add it between the quotes to enable email.)
-  email: "",
+  email: "info@ppecsoft.com",
 
   // Your phone number (optional). Leave the quotes empty ("") to hide it.
   phone: "786-912-7044",
@@ -37,8 +37,8 @@ window.PPEC_SITE = {
 <!--  ▲▲▲  STOP EDITING HERE — the rest builds the page automatically. -->
 <!-- ================================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ppec.soft — PPEC operations, compliance &amp; recordkeeping</title>
-<meta name="description" content="A secure, web-based system purpose-built for Prescribed Pediatric Extended Care (PPEC) providers: patient records, clinical documents, Medicaid authorizations, staff credentials, and AHCA compliance — in one place.">
+<title>ppec.soft — PPEC operations, compliance, intake, billing &amp; recordkeeping</title>
+<meta name="description" content="The full-service, customizable operations system for Prescribed Pediatric Extended Care centers in Florida, Texas, Mississippi, Missouri, Minnesota, and Pennsylvania: patient records, intake &amp; e-signatures, clinical notes, attendance, Medicaid billing, staff credentials, and state compliance — HIPAA-compliant and configured to each state's program.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -175,6 +175,33 @@ footer .links a{color:#a9c2cf}
 footer .links a:hover{color:#fff}
 footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding-top:18px;font-size:12.5px;color:#6f8896;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
+/* apps & integrations */
+.card .tagline{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);background:rgba(29,111,139,.08);padding:3px 9px;border-radius:99px;margin-bottom:12px}
+.card .tagline.soon{color:var(--warm);background:rgba(227,162,75,.12)}
+.card ul{margin:10px 0 0 18px;color:var(--muted);font-size:14px}
+.card ul li{margin-bottom:4px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.integ{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:22px}
+.integ .ic{flex:0 0 auto;width:42px;height:42px;border-radius:11px;background:linear-gradient(150deg,var(--teal),var(--teal-2));display:grid;place-items:center}
+.integ .ic svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.9}
+.integ h3{font-size:17px;margin-bottom:5px}
+.integ p{color:var(--muted);font-size:14px}
+.svc{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.svc span{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:8px 15px;font-size:13.5px;font-weight:500;color:var(--ink)}
+
+/* states */
+.states{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+@media(max-width:860px){.states{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.states{grid-template-columns:1fr}}
+.state{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px 22px;position:relative}
+.state .abbr{font-family:var(--display);font-weight:800;font-size:30px;color:var(--cyan);line-height:1}
+.state b{display:block;font-size:16px;margin-top:10px;color:#fff}
+.state span{display:block;color:#a9c2cf;font-size:13.5px;margin-top:3px}
+.state .prog{font-family:var(--mono);font-size:11.5px;color:#7fd3ee;letter-spacing:1px;margin-top:8px}
+.claim{font-size:17px;color:#d5e6ee;max-width:66ch;margin:0 0 30px}
+.claim b{color:#fff}
+
 /* reveal */
 .reveal{transition:opacity .6s ease,transform .6s ease}
 .js .reveal{opacity:0;transform:translateY(20px)}
@@ -188,7 +215,10 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
   <div class="wrap row">
     <div class="brand">ppec<span class="dot">.</span>soft</div>
     <nav>
-      <a class="lnk" href="#features">Features</a>
+      <a class="lnk" href="#features">Platform</a>
+      <a class="lnk" href="#apps">Apps</a>
+      <a class="lnk" href="#integrations">Integrations</a>
+      <a class="lnk" href="#states">States</a>
       <a class="lnk" href="#compliance">Compliance</a>
       <a class="lnk" href="#how">How it works</a>
       <a class="lnk" href="#contact">Contact</a>
@@ -201,14 +231,14 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
 <section class="hero">
   <div class="wrap">
     <div>
-      <div class="eyebrow reveal" style="color:var(--cyan)">For Florida PPEC providers</div>
+      <div class="eyebrow reveal" style="color:var(--cyan)">For PPEC centers in FL · TX · MS · MO · MN · PA</div>
       <h1 class="reveal" data-d="1">Run a compliant PPEC, <span class="hl">without the paperwork chaos</span>.</h1>
-      <p class="lead reveal" data-d="2">ppec.soft brings patient records, clinical documents, Medicaid authorizations, staff credentials, and your AHCA audit into one secure system — purpose-built for Prescribed Pediatric Extended Care.</p>
+      <p class="lead reveal" data-d="2">ppec.soft brings patient records, intake and e-signatures, clinical notes, attendance, Medicaid billing, staff credentials, and your state survey into one secure system — purpose-built for Prescribed Pediatric Extended Care and configured to your state's program.</p>
       <div class="cta reveal" data-d="3">
         <a class="btn btn-primary" href="#contact">Request a demo</a>
         <a class="btn btn-ghost" href="#features">See the features</a>
       </div>
-      <div class="micro reveal" data-d="3">HIPAA-deployable · One isolated instance per provider</div>
+      <div class="micro reveal" data-d="3">Full HIPAA compliance · State-compliant · One isolated, customizable instance per center</div>
     </div>
     <div class="reveal" data-d="2">
       <div class="mock">
@@ -221,7 +251,8 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
             <div class="n">PA &amp; POC</div>
             <div class="n">Employees</div>
             <div class="n">Compliance</div>
-            <div class="n">AHCA Review</div>
+            <div class="n">State Review</div>
+            <div class="n">Apps</div>
           </div>
           <div class="main">
             <div class="stat-row">
@@ -246,10 +277,11 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
 <div class="strip">
   <div class="wrap row">
     <span class="tag">Built around</span>
-    <span>AHCA personnel-file standards</span>
-    <span>The 40-day recertification workflow</span>
-    <span>The 14-section center audit</span>
-    <span>Clearinghouse / Level 2 screening</span>
+    <span>Your state's personnel-file standards</span>
+    <span>The authorization &amp; Plan-of-Care recertification cycle</span>
+    <span>The full center self-audit</span>
+    <span>Background-screening &amp; credential tracking</span>
+    <span>Google Drive document mirroring</span>
   </div>
 </div>
 
@@ -258,7 +290,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
     <div class="sec-head reveal">
       <div class="eyebrow">Everything in one place</div>
       <h2>The whole operation, organized.</h2>
-      <p>Nine connected modules replace the scattered spreadsheets, binders, and reminder notes that PPEC compliance usually lives in.</p>
+      <p>Nine connected core modules replace the scattered spreadsheets, binders, and reminder notes that PPEC compliance usually lives in — then add only the apps your center needs.</p>
     </div>
     <div class="grid">
       <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg></div><h3>Dashboard</h3><p>Active counts, upcoming recertifications, and credential alerts the moment you sign in.</p></div>
@@ -266,28 +298,107 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
       <div class="card reveal" data-d="2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg></div><h3>Clinical documents</h3><p>Upload and store Plans of Care, physician orders, and clinical files per patient.</p></div>
       <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><h3>PA &amp; POC tracking</h3><p>Authorization dates with the Plan-of-Care start auto-calculated 40 days prior, in a live work queue.</p></div>
       <div class="card reveal" data-d="1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div><h3>Employee files</h3><p>Personnel records with automatic flags for license, BLS, medical-exam, and fingerprint expirations.</p></div>
-      <div class="card reveal" data-d="2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Compliance audits</h3><p>The 14-section, 117-item PPEC Center Audit with deficiencies and corrective-action plans, ready to print.</p></div>
-      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v5H4zM4 13h16v7H4z"/></svg></div><h3>AHCA Review</h3><p>Facility licenses, inspection reports, and policy manuals — with custom sections you control.</p></div>
+      <div class="card reveal" data-d="2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Compliance audits</h3><p>The full PPEC center self-audit — cross-referenced to your state's regulation set — with deficiencies and corrective-action plans, ready to print.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v5H4zM4 13h16v7H4z"/></svg></div><h3>State agency review</h3><p>Facility licenses, inspection reports, and policy manuals organized for your state surveyor (AHCA in Florida) — with custom sections you control and PDFs that open in place.</p></div>
       <div class="card reveal" data-d="1"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-3.5 3-5.5 7-5.5"/><path d="M16 11l2 2 4-4"/></svg></div><h3>User management</h3><p>Administrator and office-staff logins with role-based access — no IT department required.</p></div>
       <div class="card reveal" data-d="2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 21h16"/></svg></div><h3>Import &amp; exports</h3><p>Load your existing rosters in one step; export tracking and personnel data to Excel anytime.</p></div>
     </div>
   </div>
 </section>
 
-<section id="compliance">
+<section id="apps" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Add-on apps</div>
+      <h2>Extend the core with the apps your center actually uses.</h2>
+      <p>Each app runs on your own instance, shares your patient and staff records, and is customized to your forms, your workflow, and your state's requirements.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal"><div class="tagline">Intake &amp; e-Signatures</div><h3>Digital admission packet</h3><p>Every consent and admission form, signed on screen by the parent or guardian.</p>
+        <ul><li>All center consents, customized to your forms</li><li>Parent handbook copy with acknowledgment</li><li>Guardian ID upload and pre-admission documents (e.g., power of attorney)</li><li>Annual re-signature reminders, separate from the Plan-of-Care cycle</li></ul></div>
+      <div class="card reveal" data-d="1"><div class="tagline">Clinical Notes</div><h3>Nursing &amp; clinical documentation</h3><p>Daily nursing notes and clinical records tied to each patient's chart, with unlimited nursing accounts.</p>
+        <ul><li>Structured note templates per your state's documentation rules</li><li>Filed to the patient record and mirrored to Drive</li><li>Priced by census, not by seat</li></ul></div>
+      <div class="card reveal" data-d="2"><div class="tagline">Attendance</div><h3>Weekly attendance</h3><p>A simple weekly attendance app for the front desk that feeds billing and census reporting.</p>
+        <ul><li>Daily check-in / check-out by patient</li><li>Weekly archive with an admin authorization step</li><li>Exports to Excel</li></ul></div>
+      <div class="card reveal"><div class="tagline">Medicaid Payment Builder</div><h3>Billing, ready to submit</h3><p>Turn authorized attendance weeks into clean Medicaid claims with full billing history.</p>
+        <ul><li>Admin authorizes the week; your biller is notified it's ready</li><li>State-specific procedure codes and modifiers</li><li>Billing history, sample data loading, and patient uploads inside the app</li></ul></div>
+      <div class="card reveal" data-d="1"><div class="tagline">Incoming</div><h3>Scanner &amp; document intake</h3><p>Scan from your office copier or email a PDF and it appears in ppec.soft, ready to be assigned.</p>
+        <ul><li>View, edit, and assign scans to a patient or employee</li><li>Authorized senders only — unknown senders are ignored</li><li>Automatic filing to the matching Drive folder</li></ul></div>
+      <div class="card reveal" data-d="2"><div class="tagline soon">Coming soon</div><h3>Transportation</h3><p>A mobile app for drivers and aides to log pickups and drop-offs, with time stamps and guardian hand-off confirmation.</p>
+        <ul><li>Route and stop tracking by day</li><li>Attendance sync on arrival</li></ul></div>
+    </div>
+    <div class="sec-head reveal" style="margin-top:56px;margin-bottom:0">
+      <div class="eyebrow">Beyond the software</div>
+      <h2 style="font-size:clamp(22px,3vw,28px)">Services we provide alongside your system</h2>
+      <p>Quoted separately, with a written scope of work before any work begins.</p>
+    </div>
+    <div class="svc reveal">
+      <span>Done-for-you Medicaid billing</span>
+      <span>State licensing &amp; survey consulting</span>
+      <span>Policy &amp; procedure manuals</span>
+      <span>HIPAA &amp; OSHA in-service trainings</span>
+      <span>BLS training</span>
+      <span>Remote online notarization</span>
+      <span>Health-insurance &amp; Medicaid enrollment</span>
+      <span>Staff training &amp; tech support</span>
+      <span>Custom build-outs &amp; project management</span>
+    </div>
+  </div>
+</section>
+
+<section id="integrations" style="padding-top:30px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Integrations</div>
+      <h2>Connected to the tools you already have.</h2>
+      <p>No new silos. ppec.soft works with the Google Workspace, copier, spreadsheets, and payroll or billing systems your center already runs on.</p>
+    </div>
+    <div class="split">
+      <div class="integ reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7l4-4h10l4 4v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 7h18"/></svg></div><div><h3>Google Drive mirroring</h3><p>Every patient, employee, and facility record links to its own Drive folder. Anything saved in ppec.soft is copied there automatically — under a signed Google Workspace HIPAA Business Associate Amendment — so your documents are never locked inside one system.</p></div></div>
+      <div class="integ reveal" data-d="1"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="10" rx="2"/><path d="M8 9V4h8v5M8 15h8"/></svg></div><div><h3>Scan-to-email &amp; copier intake</h3><p>Point your HP, Canon, or Xerox copier at a dedicated intake address. Scans land in your Incoming queue within minutes, ready to be assigned to a chart or a personnel file.</p></div></div>
+      <div class="integ reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div><div><h3>Excel import &amp; export</h3><p>Load existing patient, authorization, and staff rosters in one step, including exports from your state's background-screening clearinghouse. Export tracking and personnel data back to Excel any time.</p></div></div>
+      <div class="integ reveal" data-d="1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></div><div><h3>Apps menu for your other systems</h3><p>One-click links to your payroll, billing, and HR systems from inside ppec.soft — managed by our team, so staff always land in the right place.</p></div></div>
+      <div class="integ reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><div><h3>Two-factor authentication</h3><p>Authenticator-app (TOTP) second factor for every login, with hardware-key support available for administrators.</p></div></div>
+      <div class="integ reveal" data-d="1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h3>Support by email and text</h3><p>A named customer-support specialist for your center, online demo scheduling, and training sessions booked in 45-minute slots.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="states" style="padding-top:30px">
+  <div class="wrap">
+    <div class="dark reveal">
+      <div class="inner">
+        <div class="eyebrow" style="color:var(--cyan)">Where we serve</div>
+        <h2>One system, six states, each configured to its own program.</h2>
+        <p class="claim">ppec.soft is <b>the only full-service, customizable PPEC system with full HIPAA compliance and state compliance</b> in every state we serve. Program names, forms, procedure codes, personnel-file rules, and survey requirements are set to your state — not adapted from someone else's.</p>
+        <div class="states">
+          <div class="state"><div class="abbr">FL</div><b>Florida</b><span>Prescribed Pediatric Extended Care</span><div class="prog">PPEC</div></div>
+          <div class="state"><div class="abbr">TX</div><b>Texas</b><span>Prescribed Pediatric Extended Care Center</span><div class="prog">PPECC</div></div>
+          <div class="state"><div class="abbr">MS</div><b>Mississippi</b><span>Prescribed Pediatric Extended Care</span><div class="prog">PPEC</div></div>
+          <div class="state"><div class="abbr">MO</div><b>Missouri</b><span>Prescribed Pediatric Extended Care</span><div class="prog">PPEC</div></div>
+          <div class="state"><div class="abbr">MN</div><b>Minnesota</b><span>Prescribed Pediatric Extended Care</span><div class="prog">PPEC</div></div>
+          <div class="state"><div class="abbr">PA</div><b>Pennsylvania</b><span>Pediatric Extended Care Center</span><div class="prog">PECC</div></div>
+        </div>
+        <p style="margin-top:26px;color:#a9c2cf;font-size:14px">Opening a center in another state? <a href="#contact" style="color:var(--cyan);text-decoration:underline">Ask us</a> — new state configurations are added on request.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="compliance" style="padding-top:30px">
   <div class="wrap">
     <div class="dark reveal">
       <div class="inner">
         <div class="eyebrow" style="color:var(--cyan)">Security &amp; compliance</div>
-        <h2>Built to hold protected information — properly.</h2>
-        <p class="sub">PPEC means real patient health information and staff identifiers. ppec.soft is engineered to be deployed and operated the way that data deserves.</p>
+        <h2>Full HIPAA compliance, built in — not bolted on.</h2>
+        <p class="sub">PPEC means real patient health information and staff identifiers. ppec.soft is engineered for full HIPAA compliance across the entire stack — hosting, storage, document mirroring, and access — and operated under signed Business Associate Agreements with every center we serve.</p>
         <div class="checks">
-          <div class="chk"><div class="m">✓</div><div class="tx"><b>HIPAA-deployable</b><span>Runs in a HIPAA-enabled hosting workspace under a signed Business Associate Agreement.</span></div></div>
+          <div class="chk"><div class="m">✓</div><div class="tx"><b>Full HIPAA compliance</b><span>Runs in HIPAA-enabled hosting under signed Business Associate Agreements covering hosting and Google Workspace.</span></div></div>
           <div class="chk"><div class="m">✓</div><div class="tx"><b>Minimal sensitive data</b><span>Only the last four digits of each SSN are ever stored.</span></div></div>
           <div class="chk"><div class="m">✓</div><div class="tx"><b>Role-based access</b><span>Separate administrator and office-staff permissions, enforced on every action.</span></div></div>
           <div class="chk"><div class="m">✓</div><div class="tx"><b>Full activity audit log</b><span>Every login, view, upload, and download is recorded for your trail.</span></div></div>
-          <div class="chk"><div class="m">✓</div><div class="tx"><b>Per-client isolation</b><span>Each provider gets a dedicated instance — separate data, logins, and storage.</span></div></div>
-          <div class="chk"><div class="m">✓</div><div class="tx"><b>Encrypted in transit</b><span>All access is over HTTPS, with documents kept on your own dedicated disk.</span></div></div>
+          <div class="chk"><div class="m">✓</div><div class="tx"><b>Per-client isolation, state-configured</b><span>Each center gets a dedicated instance — separate data, logins, and storage — set to its state's program rules.</span></div></div>
+          <div class="chk"><div class="m">✓</div><div class="tx"><b>Encrypted in transit, two-factor sign-in</b><span>All access is over HTTPS with authenticator-app 2FA; documents live on your own dedicated disk.</span></div></div>
         </div>
       </div>
     </div>
@@ -302,8 +413,8 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
       <p>No installs, no servers to manage. A browser is all your team needs.</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><div class="num"></div><h3>Stand up your instance</h3><p>Your own secure, HIPAA-enabled deployment is provisioned and branded for your center.</p></div>
-      <div class="step reveal" data-d="1"><div class="num"></div><h3>Load your records</h3><p>Import patients, authorizations, and staff rosters, then add admin and office-staff logins.</p></div>
+      <div class="step reveal"><div class="num"></div><h3>Stand up your instance</h3><p>After a strategy call, your own secure, HIPAA-enabled deployment is provisioned, branded, and configured to your state's program.</p></div>
+      <div class="step reveal" data-d="1"><div class="num"></div><h3>Load your records</h3><p>Import patients, authorizations, and staff rosters, connect Drive and your copier, then add admin, office, and nursing logins.</p></div>
       <div class="step reveal" data-d="2"><div class="num"></div><h3>Stay ahead of every date</h3><p>The dashboard surfaces recerts and expiring credentials before they lapse — and your audit is always ready.</p></div>
     </div>
   </div>
@@ -314,7 +425,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
     <div class="cta-final reveal">
       <div class="eyebrow center">Get started</div>
       <h2>See ppec.soft on your own data.</h2>
-      <p>Schedule a walkthrough and we'll show you the recertification queue, credential alerts, and the full center-audit workflow — set up for your facility.</p>
+      <p>Schedule a walkthrough and we'll show you the recertification queue, digital intake, billing builder, and the full center-audit workflow — set up for your facility and your state.</p>
       <div class="btns">
         <a class="btn btn-primary" data-demo href="#contact">Request a demo</a>
         <a class="btn btn-dark" data-contact href="#contact">Contact us</a>
@@ -329,10 +440,13 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
     <div class="row">
       <div>
         <div class="brand" style="font-family:var(--display);font-weight:800;font-size:21px">ppec<span style="color:var(--cyan)">.</span>soft</div>
-        <div class="tagline">Care-coordination &amp; compliance systems for Prescribed Pediatric Extended Care providers.</div>
+        <div class="tagline">Fully HIPAA-compliant operations, compliance, intake, and billing systems for Prescribed Pediatric Extended Care centers in FL, TX, MS, MO, MN, and PA.</div>
       </div>
       <div class="links">
-        <a href="#features">Features</a>
+        <a href="#features">Platform</a>
+        <a href="#apps">Apps</a>
+        <a href="#integrations">Integrations</a>
+        <a href="#states">States</a>
         <a href="#compliance">Compliance</a>
         <a href="#how">How it works</a>
         <a href="#contact">Request a demo</a>
@@ -340,7 +454,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding
     </div>
     <div class="legal">
       <span>© <span id="yr"></span> ppec.soft · By <span id="bizName">Noai Health and Wellness, LLC</span></span>
-      <span>Not affiliated with AHCA. ppec.soft is a recordkeeping tool, not legal or compliance advice.</span>
+      <span>Not affiliated with AHCA or any state Medicaid agency. ppec.soft is a recordkeeping tool, not legal or compliance advice.</span>
     </div>
   </div>
 </footer>
